@@ -1,5 +1,6 @@
 from matrix_math import *
 from nose.tools import raises
+import nose
 
 
 def is_equal(x, y, tolerance=0.001):
@@ -218,7 +219,7 @@ def test_matrix_matrix_multiply():
 
     Matrix * Matrix = Matrix
     """
-    assert matrix_matrix_multiply(A, B) == A
+    assert matrix_matrix_multiply(A, B) == B
     assert matrix_matrix_multiply(B, C) == [[8, 10],
                                             [20, 25],
                                             [32, 40]]
@@ -233,3 +234,7 @@ def test_matrix_matrix_multiply_checks_shapes():
     """Shape Rule: The number of columns of the first matrix must equal the
     number of rows of the second matrix."""
     matrix_matrix_multiply(A, D)
+
+
+if __name__ == '__main__':
+    nose.main()
