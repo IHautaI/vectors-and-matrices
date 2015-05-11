@@ -131,11 +131,11 @@ def matrix_vector_multiply(matrix, vector):
 
 
 def matrix_matrix_multiply(mat1, mat2):
-        """
-        Returns the result of multiplying
-        a given two matrices
-        if their shapes are appropriate
-        """
+    """
+    Returns the result of multiplying
+    a given two matrices
+    if their shapes are appropriate
+    """
     if shape(mat1)[1] == shape(mat2)[0]:
         return [[dot(row, col) for col in transpose(mat2)] for row in mat1]
 
